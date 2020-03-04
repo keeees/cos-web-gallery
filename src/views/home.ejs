@@ -1,0 +1,39 @@
+<% var title = 'Home' %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('head-inc'); %>
+  </head>
+  <body>
+      <center>
+          <h1>Login</h1>
+          <form method="post" action="/login">
+              <p>
+                <label>SessionID:</label>
+                <input type="text" name="username" style="background-color:white;
+                          border: solid 1px #6E6E6E;
+                          height: 30px;
+                          font-size:18px;
+                          vertical-align:9px;color:#bbb" >
+              </p>
+              <p>
+                <label>Password:</label>
+                <input type="text" name="password" style="background-color:white;
+                          border: solid 1px #6E6E6E;
+                          height: 30px;
+                          font-size:18px;
+                          vertical-align:9px;color:#bbb" >
+              </p>
+              <p>
+                <input type="submit" value="Login" style="background-color:white;
+                          border: solid 1px #6E6E6E;
+                          height: 30px;
+                          font-size:18px;
+                          vertical-align:9px;color:#bbb" >
+              </p>
+</form>
+</center>
+  </body>
+</html>

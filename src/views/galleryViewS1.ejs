@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('head-inc'); %>
+    <link rel="stylesheet" type="text/css" href="customstyle.css">
+    <style>
+        .myButton {
+        box-shadow:inset 0px 1px 3px 0px #91b8b3;
+        background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+        background-color:#768d87;
+        border-radius:5px;
+        border:1px solid #566963;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:7px 15px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #2b665e;
+        }
+        .myButton:hover {
+        background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+        background-color:#6c7c7c;
+        }
+        .myButton:active {
+        position:relative;
+        top:1px;
+        }
+         .button {
+             box-shadow:inset 0px 0px 15px 3px #23395e;
+	         background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	         background-color:#2e466e;
+	         border-radius:17px;
+	         border:1px solid #1f2f47;
+	         display:inline-block;
+	         cursor:pointer;
+	         color:#ffffff;
+	         font-family:Arial;
+	         font-size:15px;
+	         padding:6px 13px;
+	         text-decoration:none;
+	         text-shadow:0px 1px 0px #263666;
+         }
+         .button:hover {
+	            background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	            background-color:#415989;
+               }
+         .button:active {
+	            position:relative;
+	            top:1px;
+            }
+      </style>
+</head>
+
+
+<body>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/logout">Logout</a></li>
+        <li role="presentation" class="active"><a href="/galleryS1">Session1</a></li>
+        <li role="presentation" class="active"><a href="/galleryS2">Session2</a></li>
+    </ul>
+    <div class="container">
+        <h2>Session1 Gallery <button class="myButton" onClick="window.location.reload();">Reload</button>
+</h2>
+        <div class="row">
+            <% for(var i=0; i < imageUrls.length; i++) { %>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                            <img src="<%=imageUrls[i]%>" alt="img" style="width:100%">
+                            <a href="<%=imageUrls[i]%>" download="aaa">
+                                <button class="myButton">Download</button>
+                            </a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

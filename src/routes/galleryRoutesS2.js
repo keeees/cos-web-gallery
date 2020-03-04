@@ -18,7 +18,7 @@ var galleryRouter = express.Router();
 var router = function(title) {
 
     var galleryController =
-        require('../controllers/galleryController')(title);
+        require('../controllers/galleryControllerS2')(title);
 
     galleryRouter.route('/')
         .get(galleryController.getGalleryImages);
